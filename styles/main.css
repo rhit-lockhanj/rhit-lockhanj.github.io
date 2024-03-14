@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* general */
+:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+    --line-height: 3rem;
+    /* --light-color:;
+    --body-color:;
+    --heading-color:;
+    --contrast-color:; */
+
+}
+/* body */
+body{
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 20px;
+    line-height: 1.5;
+}
+body {
+    display: grid;
+    grid-template-areas: 
+        "head nav"
+        "div div"
+        "main main"
+        "foot foot";
+    grid-template-columns: 2fr auto;
+    grid-template-rows: auto auto 1fr auto;
+}
+@media screen and (min-width: 25em){
+    body {
+        grid-template-areas: 
+            "head nav"
+            "div div"
+            "main main"
+            "foot foot";
+    }
+}
+body > nav{
+    grid-area: nav;
+    padding-left: 0;
+    padding-right: var(--horizontal-space);
+}
+body > main{
+    grid-area: main;
+}
+body > footer{
+    grid-area: foot;
+}
+body > *{
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+body{
+    /* background-color: #336275; */
+    background-image: url("images/background-texture.png");
+}
+
+header > h1{
+    font-size: 2em;
+}
+header, footer{
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+header h1, footer f1{
+    margin: 0;
+}
+body > header{
+    grid-area: head;
+}
+/* h1, h2, h3 */
+h1, h2, h3{
+    line-height: var(--line-height);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-size: 1.5em;
+    margin-bottom: 0;
+
+}
+h2{
+    font-size: 1.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h3{
+    font-size: 1em;
+    line-height: 1em;
+    font-style: italic;
+}
+/* div and span */
+body > div{
+    grid-area: div;
+}
+h3 > span{
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/* link */
+a{
+    text-decoration: none;
+    /* color: ;
+    text-decoration-color: ; */
+}
+a:hover {
+
+}
+/* paragraph and lists */
+p, dl, ul{
+    max-width: 50em;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+dl{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+body > nav ul li{
+    display: inline;
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+    padding-right: var(--horizontal-space);
+    line-height: 4rem;
+    list-style-type: none;
+}
+/* image */
+img{
+    position: relative;
+}
+.img-block{
+    display: flex;
+    justify-content: center;
+}
+/* line */
+.line{
+    border-bottom: 2px solid black;
+}
+/* about */
+body#about img{height: 15em;}
+
+/* portfolio */
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+body#portfolio ul#portfolioItems{
+    max-width: 100%;
+}
+/* resume */
+body#resume p, h3{
+    padding: 0;
+    margin: 0;
+}
+body#resume h3{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+body#resume h2{
+    margin-top: 1em;
+}
