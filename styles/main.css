@@ -39,7 +39,10 @@ body {
 body > nav{
     grid-area: nav;
     padding-left: 0;
-    padding-right: var(--horizontal-space);
+    padding-right: 0;
+}
+nav > ul{
+    padding-left: 0;
 }
 body > main{
     grid-area: main;
@@ -52,8 +55,9 @@ body > *{
     padding-right: var(--horizontal-space);
 }
 body{
-    /* background-color: #336275; */
-    background-image: url("images/background-texture.png");
+    background-color: #D9D8D2; 
+    /* background-image: url("../images/background-texture.png"); */
+    background-image: url("../images/asphalt-light.png");
 }
 
 header > h1{
@@ -104,11 +108,10 @@ h3 > span{
 /* link */
 a{
     text-decoration: none;
-    /* color: ;
-    text-decoration-color: ; */
+    color: #3f7ba6;
 }
 a:hover {
-
+    color: #7C96A6;
 }
 /* paragraph and lists */
 p, dl, ul{
@@ -141,9 +144,21 @@ img{
 /* line */
 .line{
     border-bottom: 2px solid black;
+    margin-bottom: 2rem;
+    max-inline-size: 50em;
+}
+.line-block{
+    display: block;
+    justify-content: center;
 }
 /* about */
-body#about img{height: 15em;}
+body#about img{
+    height: 15em;
+}
+.p-block{
+    display: flex;
+    justify-content: center;
+}
 
 /* portfolio */
 body#portfolio ul#portfolioItems{
